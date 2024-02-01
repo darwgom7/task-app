@@ -1,0 +1,70 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .userIcon {
+    font-size: 2.5rem; 
+    color: #555; 
+    margin-right: 1rem; 
+  }
+  
+  .name {
+    font-size: 1.5rem; 
+    color: #333; 
+    margin: 0; 
+  }
+  
+  .email {
+    font-size: 1rem; 
+    color: #666; 
+    margin: 0; 
+  }
+  
+  .logout {
+    background: none;
+    border: none;
+    padding: 0; 
+    font-size: 1rem; 
+    color: tomato; 
+    cursor: pointer;
+    text-decoration: underline; 
+    font-family: 'Verdana', sans-serif; 
+  }
+  
+  .logout:hover {
+    text-decoration: none; 
+    color: darkred; 
+  }
+  
+  .userInfo,
+  .name,
+  .email {
+    font-family: 'Verdana', sans-serif; 
+  }
+  
+  
+  .editBtn {
+    font-size: 1rem; 
+    color: #555; 
+    padding: 0.4rem 0.8rem; 
+    margin-top: 0.5rem; 
+    border: none; 
+    background: none; 
+    cursor: pointer;
+    transition: color 0.3s; 
+  }
+  
+  .editBtn:hover {
+    color: #ff5252; 
+  }
+  

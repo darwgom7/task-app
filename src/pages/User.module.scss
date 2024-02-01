@@ -1,0 +1,8 @@
+.formContainer {
+	display: flex;
+	gap: 2rem;
+    justify-content: center;
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
