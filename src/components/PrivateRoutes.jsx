@@ -1,13 +1,16 @@
-import { Navigate, Outlet } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
-
+import { Navigate, Outlet } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
+import { ClipLoader } from 'react-spinners';
 function PrivateRoutes() {
   const { auth } = useAuth();
   console.log({ auth });
 
-  if (auth === undefined) return "loading...";
+  if (auth === undefined) {
+    return <ClipLoader color="#00FFFF" size={150} />;
+  }
 
-  return auth === true ? <Outlet /> : <Navigate to="/user" />;
+  return auth ? <Outlet /> : <Navigate to="/user" />;
 }
 
 export default PrivateRoutes;
+
