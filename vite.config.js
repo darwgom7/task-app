@@ -7,7 +7,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:8080',
+        target: 'https://task-server-3rjgxneb5q-ue.a.run.app',
+        secure: false, 
+        changeOrigin: true,
       },
     },
   },
