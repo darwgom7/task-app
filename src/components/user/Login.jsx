@@ -42,7 +42,7 @@ function Login() {
           password:
           <input
             name="password"
-            type="password"
+           
             placeholder="password"
             required
             value="jen@D03"

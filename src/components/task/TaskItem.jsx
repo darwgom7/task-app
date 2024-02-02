@@ -17,7 +17,7 @@ function TaskItem({ task, deleteTask, onTaskUpdate }) {
         completed: !isCompleted,
       });
       setIsCompleted(!isCompleted);
-      onTaskUpdate(response.data); // Aquí llamas a onTaskUpdate con la tarea actualizada
+      onTaskUpdate(response.data);
       toast.success("Task updated successfully");
     } catch (err) {
       console.log(err);
@@ -36,10 +36,9 @@ function TaskItem({ task, deleteTask, onTaskUpdate }) {
         setIsLoading(true);
         const response = await axios.patch(`/api/tasks/${task.id}`, {
           title: editableTitle,
-          // Mantén el estado completado sincronizado
           completed: isCompleted,
         });
-        onTaskUpdate(response.data); // Actualiza la tarea en la lista
+        onTaskUpdate(response.data);
         toast.success("Task title updated successfully");
       } catch (err) {
         console.error(err);

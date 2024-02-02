@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default () => {
   const [auth, setAuth] = useState();
+  const authChecked = useRef(false);
 
   const verifyAuth = async () => {
     try {
@@ -15,12 +16,13 @@ export default () => {
   };
 
   useEffect(() => {
-    (
-      async () => {
+    if (!authChecked.current) {
+      (async () => {
         const data = await verifyAuth();
         setAuth(data);
-      }
-    )();
+        authChecked.current = true;
+      })();
+    }
   }, []);
 
   return { auth };
